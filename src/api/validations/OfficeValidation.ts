@@ -1,6 +1,6 @@
 import { celebrate, Joi, Segments } from "celebrate";
 
-export const officeValidation = {
+const officeValidation = {
     city: Joi.string(),
     phone: Joi.string(),
     addressLine1: Joi.string(),
