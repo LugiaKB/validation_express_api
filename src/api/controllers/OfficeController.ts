@@ -1,6 +1,5 @@
 import {NextFunction, Request, Response, Router} from 'express';
-import * as service from "../../services/officeService"
-import { OfficeInput, OfficeOutput } from "../../database/models/OfficeModel";
+import * as service from "../../services/OfficeService"
 
 export const getAll =  async (req: Request, res: Response) => {
     const office = await service.getAll();
@@ -8,18 +7,18 @@ export const getAll =  async (req: Request, res: Response) => {
 };
 
 export const getById = async (req: Request, res: Response, next: NextFunction) => {
-    const film = await service.getById(parseInt(req.params.id));
-    res.send(film);
+    const office = await service.getById(parseInt(req.params.id));
+    res.send(office);
 };
 
 export const create = async (req: Request, res: Response) => {
-    const film = await service.create(req.body);
-    res.status(201).send(film);
+    const office = await service.create(req.body);
+    res.status(201).send(office);
 };
 
 export const updateById = async (req: Request, res: Response) => {
-    const film = await service.updateById(parseInt(req.params.id), req.body);
-    res.status(201).send(film);
+    const office = await service.updateById(parseInt(req.params.id), req.body);
+    res.status(201).send(office);
 };
 
 export const deleteById = async (req: Request, res: Response) => {
