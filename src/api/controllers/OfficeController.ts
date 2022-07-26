@@ -1,5 +1,5 @@
 import {NextFunction, Request, Response, Router} from 'express';
-import * as service from "../../services/officeService"
+import * as service from "../../services/OfficeService"
 
 export const getAll =  async (req: Request, res: Response) => {
     const office = await service.getAll();
