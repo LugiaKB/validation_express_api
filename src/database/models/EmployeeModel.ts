@@ -1,6 +1,5 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { sequelize } from '../sequelize';
-import Office from './OfficeModel';
 
 export interface EmployeeAttributes {
     employeeNumber: number,
